@@ -121,6 +121,4 @@ public class 공원_산책 {
             System.out.println(i);
         }
     }
-
-
 }

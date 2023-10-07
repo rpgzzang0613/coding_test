@@ -41,6 +41,4 @@ public class 달리기_경주 {
             System.out.println(s);
         }
     }
-
-
 }

@@ -33,6 +33,4 @@ public class 추억_점수 {
             System.out.println(i);
         }
     }
-
-
 }
