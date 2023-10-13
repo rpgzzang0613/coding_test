@@ -1,6 +1,5 @@
-import baekjun.Baekjun;
-import programmers.lv_1.공원_산책;
-import programmers.lv_1.바탕화면_정리;
+import programmers.lv_1.대충_만든_자판;
+import programmers.lv_1.덧칠하기;
 
 import java.io.IOException;
 
@@ -15,7 +14,10 @@ public class Main {
 //        달리기_경주 quiz = new 달리기_경주();
 //        추억_점수 quiz = new 추억_점수();
 //        공원_산책 quiz = new 공원_산책();
-        바탕화면_정리 quiz = new 바탕화면_정리();
+//        바탕화면_정리 quiz = new 바탕화면_정리();
+//        덧칠하기 quiz = new 덧칠하기();
+        대충_만든_자판 quiz = new 대충_만든_자판();
+
         quiz.showAnswers();
     }
 
