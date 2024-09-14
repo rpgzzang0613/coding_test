@@ -1,7 +1,5 @@
 package programmers.lv_1;
 
-import java.util.HashMap;
-
 public class 공원_산책 {
 
     String[] park = {"SOO","OXX","OOO"};

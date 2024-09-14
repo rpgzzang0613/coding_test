@@ -1,8 +1,6 @@
 package programmers.lv_1;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class 대충_만든_자판 {
 
