@@ -1,32 +1,37 @@
 package programmers.lv_1;
 
-import java.util.HashMap;
+import java.util.Stack;
 
 public class 카드_뭉치 {
 
-    String[] cards1 = {"i", "drink", "water"};
+    String[] cards1 = {"i", "water", "drink"};
     String[] cards2 = {"want", "to"};
     String[] goal = {"i", "want", "to", "drink", "water"};
 
     String result = solution(cards1, cards2, goal);
 
     public String solution(String[] cards1, String[] cards2, String[] goal) {
-        String answer = "";
+        String answer = "Yes";
 
-        HashMap<String, Integer> cardMap1 = new HashMap<>();
-        HashMap<String, Integer> cardMap2 = new HashMap<>();
-        for(int i=0; i<cards1.length; i++) {
-            cardMap1.put(cards1[i], i+1);
+        Stack<String> cardStack1 = new Stack<>();
+        Stack<String> cardStack2 = new Stack<>();
+
+        for (int i = cards1.length -1; i >= 0; i--) {
+            cardStack1.push(cards1[i]);
         }
-        for(int i=0; i<cards2.length; i++) {
-            cardMap2.put(cards2[i], i+1);
+
+        for (int i = cards2.length -1; i >= 0; i--) {
+            cardStack2.push(cards2[i]);
         }
 
         for(String s : goal) {
-            if(cardMap1.containsKey(s)) {
-
-            }else if(cardMap2.containsKey(s)) {
-
+            if (!cardStack1.isEmpty() && cardStack1.peek().equals(s)) {
+                cardStack1.pop();
+            } else if (!cardStack2.isEmpty() && cardStack2.peek().equals(s)) {
+                cardStack2.pop();
+            } else {
+                answer = "No";
+                break;
             }
         }
 
