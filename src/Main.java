@@ -43,7 +43,9 @@ public class Main {
 //        문자열_다루기_기본 quiz = new 문자열_다루기_기본();
 //        행렬의_덧셈 quiz = new 행렬의_덧셈();
 //        최대공약수와_최소공배수 quiz = new 최대공약수와_최소공배수();
-        같은_숫자는_싫어 quiz = new 같은_숫자는_싫어();
+//        같은_숫자는_싫어 quiz = new 같은_숫자는_싫어();
+//        예산 quiz = new 예산();
+        삼진법_뒤집기 quiz = new 삼진법_뒤집기();
         quiz.showAnswers();
     }
 
