@@ -45,7 +45,12 @@ public class Main {
 //        최대공약수와_최소공배수 quiz = new 최대공약수와_최소공배수();
 //        같은_숫자는_싫어 quiz = new 같은_숫자는_싫어();
 //        예산 quiz = new 예산();
-        삼진법_뒤집기 quiz = new 삼진법_뒤집기();
+//        삼진법_뒤집기 quiz = new 삼진법_뒤집기();
+//        크기가_작은_부분_문자열 quiz = new 크기가_작은_부분_문자열();
+//        이상한_문자_만들기 quiz = new 이상한_문자_만들기();
+//        삼총사 quiz = new 삼총사();
+//        최소직사각형 quiz = new 최소직사각형();
+        시저_암호 quiz = new 시저_암호();
         quiz.showAnswers();
     }
 
