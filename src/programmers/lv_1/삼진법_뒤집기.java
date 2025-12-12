@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 삼진법_뒤집기 {
-    int n = 99999999;
+import programmers.ProgrammersQuiz;
 
-    int result = solution(n);
+public class 삼진법_뒤집기 implements ProgrammersQuiz {
 
     public int solution(int n) {
         int answer = 0;
@@ -26,7 +25,12 @@ public class 삼진법_뒤집기 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int n = 99999999;
+
+        int result = solution(n);
+
         System.out.println(result);
     }
 

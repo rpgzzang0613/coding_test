@@ -1,10 +1,8 @@
 package programmers.lv_1;
 
-public class 크기가_작은_부분_문자열 {
-    String t = "9322352";
-    String p = "325";
+import programmers.ProgrammersQuiz;
 
-    int result = solution(t, p);
+public class 크기가_작은_부분_문자열 implements ProgrammersQuiz {
 
     public int solution(String t, String p) {
         int answer = 0;
@@ -25,7 +23,13 @@ public class 크기가_작은_부분_문자열 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String t = "9322352";
+        String p = "325";
+
+        int result = solution(t, p);
+
         System.out.println(result);
     }
 

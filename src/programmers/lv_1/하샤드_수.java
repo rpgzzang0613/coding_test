@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 하샤드_수 {
-    int x = 24234;
+import programmers.ProgrammersQuiz;
 
-    boolean result = solution(x);
+public class 하샤드_수 implements ProgrammersQuiz {
 
     public boolean solution(int x) {
         String xStr = String.valueOf(x);
@@ -19,7 +18,12 @@ public class 하샤드_수 {
         return x % plusOne == 0;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int x = 24234;
+
+        boolean result = solution(x);
+
         System.out.println(result);
     }
 

@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 최소직사각형 {
-    int[][] sizes = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+import programmers.ProgrammersQuiz;
 
-    int result = solution(sizes);
+public class 최소직사각형 implements ProgrammersQuiz {
 
     public int solution(int[][] sizes) {
         int width = 0;
@@ -19,7 +18,12 @@ public class 최소직사각형 {
         return width * height;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[][] sizes = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+
+        int result = solution(sizes);
+
         System.out.println(result);
     }
 

@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 시저_암호 {
-    String s = "xyz";
+import programmers.ProgrammersQuiz;
 
-    String result = solution(s, 3);
+public class 시저_암호 implements ProgrammersQuiz {
 
     public String solution(String s, int n) {
         StringBuilder answer = new StringBuilder();
@@ -21,7 +20,7 @@ public class 시저_암호 {
                 } else {
                     answer.append((char) ('a' + (c + n - 'z' - 1)));
                 }
-            }  else {
+            } else {
                 answer.append(' ');
             }
         }
@@ -29,7 +28,12 @@ public class 시저_암호 {
         return answer.toString();
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "xyz";
+
+        String result = solution(s, 3);
+
         System.out.println(result);
     }
 

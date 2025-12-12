@@ -1,12 +1,10 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.Arrays;
 
-public class 예산 {
-    int[] d = {2, 2, 3, 3};
-    int budget = 10;
-
-    int result = solution(d, budget);
+public class 예산 implements ProgrammersQuiz {
 
     public int solution(int[] d, int budget) {
         int[] sorted = Arrays.stream(d).sorted().toArray();
@@ -24,7 +22,13 @@ public class 예산 {
         return d.length;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[] d = {2, 2, 3, 3};
+        int budget = 10;
+
+        int result = solution(d, budget);
+
         System.out.println(result);
     }
 

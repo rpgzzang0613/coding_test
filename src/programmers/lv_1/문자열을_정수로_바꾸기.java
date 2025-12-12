@@ -1,15 +1,19 @@
 package programmers.lv_1;
 
-public class 문자열을_정수로_바꾸기 {
-    String s = "-1234";
+import programmers.ProgrammersQuiz;
 
-    int result = solution(s);
+public class 문자열을_정수로_바꾸기 implements ProgrammersQuiz {
 
     public int solution(String s) {
         return Integer.parseInt(s);
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "-1234";
+
+        int result = solution(s);
+
         System.out.println(result);
     }
 

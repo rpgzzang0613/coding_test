@@ -1,12 +1,10 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.Arrays;
 
-public class 최대공약수와_최소공배수 {
-    int n = 60;
-    int m = 48;
-
-    int[] result = solution(n, m);
+public class 최대공약수와_최소공배수 implements ProgrammersQuiz {
 
     public int[] solution(int n, int m) {
         int[] answer = new int[2];
@@ -28,7 +26,13 @@ public class 최대공약수와_최소공배수 {
         return getGcd(min, max % min);
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int n = 60;
+        int m = 48;
+
+        int[] result = solution(n, m);
+
         System.out.println(Arrays.toString(result));
     }
 

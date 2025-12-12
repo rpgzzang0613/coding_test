@@ -1,11 +1,8 @@
 package programmers.lv_1;
 
-public class 부족한_금액_계산하기 {
-    int price = 3;
-    int money = 20;
-    int count = 4;
+import programmers.ProgrammersQuiz;
 
-    long result = solution(price, money, count);
+public class 부족한_금액_계산하기 implements ProgrammersQuiz {
 
     public long solution(int price, int money, int count) {
         long totalPrice = 0;
@@ -20,7 +17,14 @@ public class 부족한_금액_계산하기 {
         }
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int price = 3;
+        int money = 20;
+        int count = 4;
+
+        long result = solution(price, money, count);
+
         System.out.println(result);
     }
 

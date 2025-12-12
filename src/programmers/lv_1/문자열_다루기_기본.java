@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 문자열_다루기_기본 {
-    String s = "a1245";
+import programmers.ProgrammersQuiz;
 
-    boolean result = solution(s);
+public class 문자열_다루기_기본 implements ProgrammersQuiz {
 
     public boolean solution(String s) {
         if (s.length() != 4 && s.length() != 6) {
@@ -20,7 +19,12 @@ public class 문자열_다루기_기본 {
         return true;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "a1245";
+
+        boolean result = solution(s);
+
         System.out.println(result);
     }
 

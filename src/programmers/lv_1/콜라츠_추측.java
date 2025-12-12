@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 콜라츠_추측 {
-    int num = 6;
+import programmers.ProgrammersQuiz;
 
-    int result = solution(num);
+public class 콜라츠_추측 implements ProgrammersQuiz {
 
     public int solution(int num) {
         if (num == 1) {
@@ -30,7 +29,12 @@ public class 콜라츠_추측 {
         return cnt;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int num = 6;
+
+        int result = solution(num);
+
         System.out.println(result);
     }
 

@@ -1,12 +1,8 @@
 package programmers.lv_1;
 
-public class 공원_산책 {
+import programmers.ProgrammersQuiz;
 
-    String[] park = {"SOO","OXX","OOO"};
-
-    String[] routes = {"E 2","S 2","W 1"};
-
-    int[] result = solution(park, routes);
+public class 공원_산책 implements ProgrammersQuiz {
 
     public int[] solution(String[] park, String[] routes) {
         int[] answer = new int[2];
@@ -17,36 +13,36 @@ public class 공원_산책 {
         int currentH = 0;
         int currentW = 0;
 
-        for(int i=0; i<park.length; i++) {
-            if(park[i].contains("S")) {
+        for (int i = 0; i < park.length; i++) {
+            if (park[i].contains("S")) {
                 currentH = i;
                 currentW = park[i].indexOf("S");
                 break;
             }
         }
 
-        for(String route : routes) {
+        for (String route : routes) {
             String direction = route.split(" ")[0];
             int length = Integer.parseInt(route.split(" ")[1]);
 
             boolean isInRange = checkRange(direction, length, currentH, currentW, MAX_H, MAX_W);
-            if(!isInRange) {
+            if (!isInRange) {
                 continue;
             }
 
             boolean isPossibleToGo = checkPossibleToGo(direction, length, currentH, currentW, park);
-            if(!isPossibleToGo) {
+            if (!isPossibleToGo) {
                 continue;
             }
 
-            if(direction.equals("E") || direction.equals("W")) {
-                if(direction.equals("W")) {
+            if (direction.equals("E") || direction.equals("W")) {
+                if (direction.equals("W")) {
                     length = -length;
                 }
 
                 currentW += length;
-            }else {
-                if(direction.equals("N")) {
+            } else {
+                if (direction.equals("N")) {
                     length = -length;
                 }
 
@@ -64,20 +60,20 @@ public class 공원_산책 {
     private boolean checkRange(String direction, int length, int currentH, int currentW, int maxH, int maxW) {
         boolean isInRange = false;
 
-        if(direction.equals("E") || direction.equals("W")) {
-            if(direction.equals("W")) {
+        if (direction.equals("E") || direction.equals("W")) {
+            if (direction.equals("W")) {
                 length = -length;
             }
 
-            if(currentW + length >= 0 && currentW + length <= maxW-1) {
+            if (currentW + length >= 0 && currentW + length <= maxW - 1) {
                 isInRange = true;
             }
-        }else {
-            if(direction.equals("N")) {
+        } else {
+            if (direction.equals("N")) {
                 length = -length;
             }
 
-            if(currentH + length >= 0 && currentH + length <= maxH-1) {
+            if (currentH + length >= 0 && currentH + length <= maxH - 1) {
                 isInRange = true;
             }
         }
@@ -88,9 +84,9 @@ public class 공원_산책 {
     private boolean checkPossibleToGo(String direction, int length, int currentH, int currentW, String[] park) {
         boolean isPossibleToGo = true;
 
-        for(int i=1; i<=length; i++) {
+        for (int i = 1; i <= length; i++) {
             char symbol;
-            switch(direction) {
+            switch (direction) {
                 case "E":
                     symbol = park[currentH].charAt(currentW + i);
                     break;
@@ -105,7 +101,7 @@ public class 공원_산책 {
                     break;
             }
 
-            if(symbol == 'X') {
+            if (symbol == 'X') {
                 isPossibleToGo = false;
                 break;
             }
@@ -114,9 +110,16 @@ public class 공원_산책 {
         return isPossibleToGo;
     }
 
-    public void showAnswers() {
-        for(int i : result) {
+    @Override
+    public void execute() {
+        String[] park = {"SOO", "OXX", "OOO"};
+        String[] routes = {"E 2", "S 2", "W 1"};
+
+        int[] result = solution(park, routes);
+
+        for (int i : result) {
             System.out.println(i);
         }
     }
+
 }

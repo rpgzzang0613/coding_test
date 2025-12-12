@@ -1,11 +1,8 @@
 package programmers.lv_1;
 
-public class 약수의_개수와_덧셈 {
+import programmers.ProgrammersQuiz;
 
-    int left = 1;
-    int right = 3;
-
-    int result = solution(left, right);
+public class 약수의_개수와_덧셈 implements ProgrammersQuiz {
 
     public int solution(int left, int right) {
         int answer = 0;
@@ -28,7 +25,14 @@ public class 약수의_개수와_덧셈 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int left = 1;
+        int right = 3;
+
+        int result = solution(left, right);
+
         System.out.println(result);
     }
+
 }

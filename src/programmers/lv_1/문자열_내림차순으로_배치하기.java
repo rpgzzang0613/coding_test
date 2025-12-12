@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 문자열_내림차순으로_배치하기 {
-    String s = "diDCqslcw";
+import programmers.ProgrammersQuiz;
 
-    String result = solution(s);
+public class 문자열_내림차순으로_배치하기 implements ProgrammersQuiz {
 
     public String solution(String s) {
         char[] charArr = s.toCharArray();
@@ -24,7 +23,13 @@ public class 문자열_내림차순으로_배치하기 {
         return new String(charArr);
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "diDCqslcw";
+
+        String result = solution(s);
+
         System.out.println(result);
     }
+
 }

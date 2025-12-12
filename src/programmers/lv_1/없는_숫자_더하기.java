@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 없는_숫자_더하기 {
-    int[] numbers = {1, 2, 3, 5, 7};
+import programmers.ProgrammersQuiz;
 
-    int result = solution(numbers);
+public class 없는_숫자_더하기 implements ProgrammersQuiz {
 
     public int solution(int[] numbers) {
         int answer = 0;
@@ -21,7 +20,12 @@ public class 없는_숫자_더하기 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[] numbers = {1, 2, 3, 5, 7};
+
+        int result = solution(numbers);
+
         System.out.println(result);
     }
 

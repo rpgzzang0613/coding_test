@@ -1,12 +1,10 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.Arrays;
 
-public class 행렬의_덧셈 {
-    int[][] arr1 = {{1, 2}, {2, 3}};
-    int[][] arr2 = {{3, 4}, {5, 6}};
-
-    int[][] result = solution(arr1, arr2);
+public class 행렬의_덧셈 implements ProgrammersQuiz {
 
     public int[][] solution(int[][] arr1, int[][] arr2) {
         int iLength = arr1.length;
@@ -23,7 +21,13 @@ public class 행렬의_덧셈 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[][] arr1 = {{1, 2}, {2, 3}};
+        int[][] arr2 = {{3, 4}, {5, 6}};
+
+        int[][] result = solution(arr1, arr2);
+
         System.out.println(Arrays.deepToString(result));
     }
 

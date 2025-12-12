@@ -1,11 +1,8 @@
 package programmers.lv_1;
 
-public class 두_정수_사이의_합 {
+import programmers.ProgrammersQuiz;
 
-    int a = -2;
-    int b = 1;
-
-    long result = solution(a, b);
+public class 두_정수_사이의_합 implements ProgrammersQuiz {
 
     public long solution(int a, int b) {
         if (a == b) {
@@ -48,7 +45,14 @@ public class 두_정수_사이의_합 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int a = -2;
+        int b = 1;
+
+        long result = solution(a, b);
+
         System.out.println(result);
     }
+
 }

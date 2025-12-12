@@ -1,11 +1,10 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.Arrays;
 
-public class 같은_숫자는_싫어 {
-    int[] arr = {1, 1, 3, 3, 0, 1, 1};
-
-    int[] result = solution(arr);
+public class 같은_숫자는_싫어 implements ProgrammersQuiz {
 
     public int[] solution(int[] arr) {
         StringBuilder sb = new StringBuilder();
@@ -27,7 +26,12 @@ public class 같은_숫자는_싫어 {
         return result;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[] arr = {1, 1, 3, 3, 0, 1, 1};
+
+        int[] result = solution(arr);
+
         System.out.println(Arrays.toString(result));
     }
 

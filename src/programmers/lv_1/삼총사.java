@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 삼총사 {
-    int[] number = {-2, 3, 0, 2, -5};
+import programmers.ProgrammersQuiz;
 
-    int result = solution(number);
+public class 삼총사 implements ProgrammersQuiz {
 
     public int solution(int[] number) {
         int answer = 0;
@@ -25,7 +24,12 @@ public class 삼총사 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int[] number = {-2, 3, 0, 2, -5};
+
+        int result = solution(number);
+
         System.out.println(result);
     }
 

@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 수박수박수박수박수박수 {
-    int n = 9;
+import programmers.ProgrammersQuiz;
 
-    String result = solution(n);
+public class 수박수박수박수박수박수 implements ProgrammersQuiz {
 
     public String solution(int n) {
         String answer = "수박".repeat(n / 2);
@@ -15,7 +14,13 @@ public class 수박수박수박수박수박수 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int n = 9;
+
+        String result = solution(n);
+
         System.out.println(result);
     }
+
 }

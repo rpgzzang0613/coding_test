@@ -1,10 +1,8 @@
 package programmers.lv_1;
 
-public class 정수_내림차순으로_배치하기 {
+import programmers.ProgrammersQuiz;
 
-    long n = 118372L;
-
-    long result = solution(n);
+public class 정수_내림차순으로_배치하기 implements ProgrammersQuiz {
 
     public long solution(long n) {
         char[] nCharArr = String.valueOf(n).toCharArray();
@@ -26,7 +24,12 @@ public class 정수_내림차순으로_배치하기 {
         return Long.parseLong(new String(nCharArr));
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        long n = 118372L;
+
+        long result = solution(n);
+
         System.out.println(result);
     }
 

@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 이상한_문자_만들기 {
-    String s = "a A z Z ";
+import programmers.ProgrammersQuiz;
 
-    String result = solution(s);
+public class 이상한_문자_만들기 implements ProgrammersQuiz {
 
     public String solution(String s) {
         StringBuilder answer = new StringBuilder();
@@ -38,7 +37,12 @@ public class 이상한_문자_만들기 {
         return new String(answer);
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "a A z Z ";
+
+        String result = solution(s);
+
         System.out.println(result);
     }
 

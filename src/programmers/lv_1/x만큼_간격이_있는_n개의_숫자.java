@@ -1,12 +1,10 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.Arrays;
 
-public class x만큼_간격이_있는_n개의_숫자 {
-    int x = -4;
-    int n = 4;
-
-    long[] result = solution(x, n);
+public class x만큼_간격이_있는_n개의_숫자 implements ProgrammersQuiz {
 
     public long[] solution(int x, int n) {
         long[] answer = new long[n];
@@ -17,7 +15,14 @@ public class x만큼_간격이_있는_n개의_숫자 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        int x = -4;
+        int n = 4;
+
+        long[] result = solution(x, n);
+
         System.out.println(Arrays.toString(result));
     }
+
 }

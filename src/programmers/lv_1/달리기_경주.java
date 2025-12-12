@@ -1,22 +1,20 @@
 package programmers.lv_1;
 
+import programmers.ProgrammersQuiz;
+
 import java.util.HashMap;
 
-public class 달리기_경주 {
-
-    String[] players = {"mumu", "soe", "poe", "kai", "mine"};
-    String[] callings = {"kai", "kai", "mine", "mine"};
-    String[] result = solution(players, callings);
+public class 달리기_경주 implements ProgrammersQuiz {
 
     public String[] solution(String[] players, String[] callings) {
         HashMap<String, Integer> playerMap = new HashMap<>();
         HashMap<Integer, String> rankMap = new HashMap<>();
-        for(int i=0; i<players.length; i++) {
+        for (int i = 0; i < players.length; i++) {
             playerMap.put(players[i], i);
             rankMap.put(i, players[i]);
         }
 
-        for(int i=0; i<callings.length; i++) {
+        for (int i = 0; i < callings.length; i++) {
             String calledPlayer = callings[i];
             int calledRank = playerMap.get(calledPlayer);
 
@@ -36,9 +34,16 @@ public class 달리기_경주 {
         return players;
     }
 
-    public void showAnswers() {
-        for(String s : result) {
+    @Override
+    public void execute() {
+        String[] players = {"mumu", "soe", "poe", "kai", "mine"};
+        String[] callings = {"kai", "kai", "mine", "mine"};
+
+        String[] result = solution(players, callings);
+
+        for (String s : result) {
             System.out.println(s);
         }
     }
+
 }

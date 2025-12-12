@@ -1,9 +1,8 @@
 package programmers.lv_1;
 
-public class 정수_제곱근_판별 {
-    long n = 118372L;
+import programmers.ProgrammersQuiz;
 
-    long result = solution(n);
+public class 정수_제곱근_판별 implements ProgrammersQuiz {
 
     public long solution(long n) {
         long answer = -1L;
@@ -17,7 +16,12 @@ public class 정수_제곱근_판별 {
         return answer;
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        long n = 118372L;
+
+        long result = solution(n);
+
         System.out.println(result);
     }
 

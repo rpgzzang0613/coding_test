@@ -1,10 +1,8 @@
 package programmers.lv_1;
 
-public class 가운데_글자_가져오기 {
+import programmers.ProgrammersQuiz;
 
-    String s = "DFKS";
-
-    String result = solution(s);
+public class 가운데_글자_가져오기 implements ProgrammersQuiz {
 
     public String solution(String s) {
         if (s.length() == 1) {
@@ -14,13 +12,19 @@ public class 가운데_글자_가져오기 {
         int len = s.length();
 
         if (len % 2 != 0) {
-            return String.valueOf(s.charAt(len/2));
+            return String.valueOf(s.charAt(len / 2));
         } else {
-            return String.valueOf(s.charAt(len/2 - 1)) + s.charAt(len / 2);
+            return String.valueOf(s.charAt(len / 2 - 1)) + s.charAt(len / 2);
         }
     }
 
-    public void showAnswers() {
+    @Override
+    public void execute() {
+        String s = "DFKS";
+
+        String result = solution(s);
+
         System.out.println(result);
     }
+
 }
