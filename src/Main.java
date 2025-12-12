@@ -53,7 +53,10 @@ public class Main {
 //        quizName = "이상한_문자_만들기";
 //        quizName = "삼총사";
 //        quizName = "최소직사각형";
-        quizName = "시저_암호";
+//        quizName = "시저_암호";
+//        quizName = "콜라_문제";
+//        quizName = "명예의_전당_1";
+        quizName = "문자열_내_마음대로_정렬하기";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
