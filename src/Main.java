@@ -56,7 +56,11 @@ public class Main {
 //        quizName = "시저_암호";
 //        quizName = "콜라_문제";
 //        quizName = "명예의_전당_1";
-        quizName = "문자열_내_마음대로_정렬하기";
+//        quizName = "문자열_내_마음대로_정렬하기";
+//        quizName = "비밀지도_1차";
+//        quizName = "폰켓몬";
+//        quizName = "기사단원의_무기";
+        quizName = "_2016년";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
