@@ -62,7 +62,10 @@ public class Main {
 //        quizName = "기사단원의_무기";
 //        quizName = "_2016년";
 //        quizName = "모의고사";
-        quizName = "과일_장수";
+//        quizName = "과일_장수";
+//        quizName = "지폐_접기";
+//        quizName = "소수_만들기";
+        quizName = "소수_찾기";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
