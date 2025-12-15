@@ -60,7 +60,9 @@ public class Main {
 //        quizName = "비밀지도_1차";
 //        quizName = "폰켓몬";
 //        quizName = "기사단원의_무기";
-        quizName = "_2016년";
+//        quizName = "_2016년";
+//        quizName = "모의고사";
+        quizName = "과일_장수";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
