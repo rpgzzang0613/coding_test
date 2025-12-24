@@ -65,7 +65,13 @@ public class Main {
 //        quizName = "과일_장수";
 //        quizName = "지폐_접기";
 //        quizName = "소수_만들기";
-        quizName = "소수_찾기";
+//        quizName = "소수_찾기";
+//        quizName = "옹알이_2";
+//        quizName = "실패율";
+//        quizName = "둘만의_암호";
+//        quizName = "이웃한_칸";
+//        quizName = "문자열_나누기";
+        quizName = "다트게임_1차";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
