@@ -71,7 +71,13 @@ public class Main {
 //        quizName = "둘만의_암호";
 //        quizName = "이웃한_칸";
 //        quizName = "문자열_나누기";
-        quizName = "다트게임_1차";
+//        quizName = "다트게임_1차";
+//        quizName = "로또의_최고_순위와_최저_순위";
+//        quizName = "완주하지_못한_선수";
+//        quizName = "체육복";
+//        quizName = "햄버거_만들기";
+//        quizName = "숫자_짝꿍";
+        quizName = "데이터_분석";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
