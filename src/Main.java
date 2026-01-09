@@ -77,7 +77,10 @@ public class Main {
 //        quizName = "체육복";
 //        quizName = "햄버거_만들기";
 //        quizName = "숫자_짝꿍";
-        quizName = "데이터_분석";
+//        quizName = "데이터_분석";
+//        quizName = "크레인_인형뽑기_게임";
+//        quizName = "성격_유형_검사하기";
+        quizName = "키패드_누르기";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
