@@ -31,12 +31,20 @@ public class 데이터_분석 implements ProgrammersQuiz {
     }
 
     private int titleToIndex(String code) {
-        return switch (code) {
-            case "date" -> 1;
-            case "maximum" -> 2;
-            case "remain" -> 3;
-            default -> 0;
-        };
+        int index = 0;
+        switch (code) {
+            case "date":
+                index = 1;
+                break;
+            case "maximum":
+                index = 2;
+                break;
+            case "remain":
+                index = 3;
+                break;
+        }
+
+        return index;
     }
 
     @Override

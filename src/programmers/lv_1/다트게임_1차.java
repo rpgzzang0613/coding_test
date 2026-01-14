@@ -22,11 +22,14 @@ public class 다트게임_1차 implements ProgrammersQuiz {
             String bonus = matcher.group(2);
             String option = matcher.group(3);
 
-            score = switch (bonus) {
-                case "D" -> score * score;
-                case "T" -> score * score * score;
-                default -> score;
-            };
+            switch (bonus) {
+                case "D":
+                    score = score * score;
+                    break;
+                case "T":
+                    score = score * score * score;
+                    break;
+            }
 
             if ("*".equals(option)) {
                 score = score * 2;

@@ -80,7 +80,10 @@ public class Main {
 //        quizName = "데이터_분석";
 //        quizName = "크레인_인형뽑기_게임";
 //        quizName = "성격_유형_검사하기";
-        quizName = "키패드_누르기";
+//        quizName = "키패드_누르기";
+//        quizName = "신규_아이디_추천";
+//        quizName = "개인정보_수집_유효기간";
+        quizName = "유연근무제";
 
         ProgrammersQuizFactory.create(quizName)
                 .execute();
